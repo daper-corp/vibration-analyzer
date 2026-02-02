@@ -5,6 +5,16 @@
 [![Flutter](https://img.shields.io/badge/Flutter-3.35.4-blue.svg)](https://flutter.dev)
 [![Dart](https://img.shields.io/badge/Dart-3.9.2-blue.svg)](https://dart.dev)
 [![License](https://img.shields.io/badge/License-Proprietary-red.svg)]()
+[![Build](https://img.shields.io/badge/Build-Passing-green.svg)]()
+[![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS%20%7C%20Web-lightgrey.svg)]()
+
+## 🔗 Quick Links
+
+| 리소스 | URL |
+|--------|-----|
+| **GitHub Repository** | https://github.com/daper-corp/vibration-analyzer |
+| **웹 데모** | https://5060-iqxyh1sysjapvts6gbdl2-8f57ffe2.sandbox.novita.ai |
+| **APK 다운로드** | `build/app/outputs/flutter-apk/app-release.apk` (17.6MB) |
 
 ---
 
@@ -350,4 +360,53 @@ final dynamicAccel = abs(magnitude - 9.80665);  // |벡터합 - 중력|
 
 ---
 
+---
+
+## 🔧 개발 환경 설정
+
+### 필수 요구사항
+```
+Flutter SDK: 3.35.4+
+Dart SDK: 3.9.2+
+Android SDK: 35 (Android 15)
+Java: OpenJDK 17+
+```
+
+### 처음 시작하기
+```bash
+# 레포지토리 클론
+git clone https://github.com/daper-corp/vibration-analyzer.git
+cd vibration-analyzer
+
+# 의존성 설치
+flutter pub get
+
+# Hive 어댑터 생성 (이미 생성되어 있음)
+# flutter pub run build_runner build --delete-conflicting-outputs
+
+# 분석 실행
+flutter analyze
+
+# 웹 미리보기 실행
+flutter build web --release
+python3 -m http.server 5060 --directory build/web
+
+# Android APK 빌드
+flutter build apk --release
+```
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
 *이 문서는 자동 생성되었습니다. 최종 수정: 2025-02-02*
+
+**© 2025 daper-corp. All rights reserved.**
